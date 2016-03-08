@@ -12,6 +12,7 @@ public class SearchTests {
         line();
         sequentialSearch();
         line();
+        binarySearch();
     }
 
     /**
@@ -22,9 +23,20 @@ public class SearchTests {
         SequentialSearch ss = new SequentialSearch();
         Integer[] arr = genRandomIntArray(5, 0, 10);
 
+        System.out.println("Sequential Search: ");
         System.out.println("Array to search: " + Arrays.toString(arr));
         System.out.println("Value to search for: " + value);
         System.out.println("The value " + value + (ss.sequentialSearch(arr, value) ? " was found": " was not found"));
+    }
+
+    private static void binarySearch() {
+        Integer value = 10;
+        Integer[] arr = genRandomIntArray(5, 0, 10);
+
+        System.out.println("Binary Search: ");
+        System.out.println("Array to search: " + Arrays.toString(arr));
+        System.out.println("Value to search for: " + value);
+        System.out.println("The value " + value + (BinarySearch.binarySearch(arr, value) ? " was found": " was not found"));
     }
 
     /**
