@@ -1,5 +1,7 @@
 package com.github.esperditi.search;
 
+import com.github.esperditi.Helper;
+
 import java.util.Arrays;
 import java.util.Random;
 
@@ -19,7 +21,7 @@ public class SearchTests {
     private static void sequentialSearch() {
         Integer value = 10;
         SequentialSearch ss = new SequentialSearch();
-        Integer[] arr = genRandomIntArray(5, 0, 10);
+        Integer[] arr = Helper.genRandomIntArray(5, 0, 10);
 
         System.out.println("Sequential Search: ");
         System.out.println("Array to search: " + Arrays.toString(arr));
@@ -29,7 +31,7 @@ public class SearchTests {
 
     private static void binarySearch() {
         Integer value = 10;
-        Integer[] arr = genRandomIntArray(5, 0, 10);
+        Integer[] arr = Helper.genRandomIntArray(5, 0, 10);
 
         System.out.println("Binary Search: ");
         System.out.println("Array to search: " + Arrays.toString(arr));
@@ -37,24 +39,4 @@ public class SearchTests {
         System.out.println("The value " + value + (BinarySearch.binarySearch(arr, value) ? " was found": " was not found"));
     }
 
-    /**
-     * Generates an array of size arrSize of random Integer objects where the
-     * generated integer values are between lowerBound and upperBound, inclusive.
-     *
-     * @param arrSize -- size of array to be generated
-     * @param lowerBound -- lowest possible random integer
-     * @param upperBound -- largest possible random integer
-     */
-    private static Integer[] genRandomIntArray(int arrSize, int lowerBound, int upperBound) {
-
-        Integer[] arr = new Integer[arrSize];
-        Random rand = new Random();
-
-        for (int i = 0; i < arrSize; i += 1) {
-            Integer randNum = rand.nextInt((upperBound - lowerBound) + 1) + lowerBound;
-            arr[i] = randNum;
-        }
-
-        return arr;
-    }
 }
