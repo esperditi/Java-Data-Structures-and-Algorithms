@@ -1,4 +1,4 @@
-package com.github.esperditi;
+package com.github.esperditi.search;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -9,9 +9,7 @@ import java.util.Random;
 public class SearchTests {
 
     public static void main(String args[]) {
-        line();
         sequentialSearch();
-        line();
         binarySearch();
     }
 
@@ -37,13 +35,6 @@ public class SearchTests {
         System.out.println("Array to search: " + Arrays.toString(arr));
         System.out.println("Value to search for: " + value);
         System.out.println("The value " + value + (BinarySearch.binarySearch(arr, value) ? " was found": " was not found"));
-    }
-
-    /**
-     * Simple method that prints lines to help delineate console-bound output
-     */
-    private static void line() {
-        System.out.println("----------------------");
     }
 
     /**

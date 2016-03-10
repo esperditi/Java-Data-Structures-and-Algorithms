@@ -1,4 +1,4 @@
-package com.github.esperditi;
+package com.github.esperditi.search;
 
 /**
  * This class handles the implementation details of the binary search algorithm.
