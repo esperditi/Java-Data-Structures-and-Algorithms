@@ -8,11 +8,17 @@ import java.util.Random;
  */
 public class SortTests {
 
-
+    /**
+     * Comment out the different tests in main to test different sorting algorithms!
+     * @param args
+     */
     public static void main(String[] args) {
         selectionSort();
     }
 
+    /**
+     * Test for selection sort algorithm.
+     */
     private static void selectionSort() {
         Integer[] arr = genRandomIntArray(5, 0, 10);
 

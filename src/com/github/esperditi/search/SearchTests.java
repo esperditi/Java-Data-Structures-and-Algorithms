@@ -1,15 +1,17 @@
 package com.github.esperditi.search;
 
 import com.github.esperditi.Helper;
-
 import java.util.Arrays;
-import java.util.Random;
 
 /**
  * This class is dedicated to running tests on various search algorithms.
  */
 public class SearchTests {
 
+    /**
+     * Comment out the different tests in main to test different search algorithms!
+     * @param args
+     */
     public static void main(String args[]) {
         sequentialSearch();
         binarySearch();
@@ -29,6 +31,9 @@ public class SearchTests {
         System.out.println("The value " + value + (ss.sequentialSearch(arr, value) ? " was found": " was not found"));
     }
 
+    /**
+     * Test for binary search algorithm.
+     */
     private static void binarySearch() {
         Integer value = 10;
         Integer[] arr = Helper.genRandomIntArray(5, 0, 10);
