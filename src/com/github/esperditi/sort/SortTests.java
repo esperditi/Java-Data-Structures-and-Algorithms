@@ -1,7 +1,7 @@
 package com.github.esperditi.sort;
 
+import com.github.esperditi.Helper;
 import java.util.Arrays;
-import java.util.Random;
 
 /**
  * This class is dedicated to running tests on various sorting algorithms.
@@ -13,14 +13,15 @@ public class SortTests {
      * @param args
      */
     public static void main(String[] args) {
-        selectionSort();
+        //selectionSort();
+        //insertionSort();
     }
 
     /**
      * Test for selection sort algorithm.
      */
     private static void selectionSort() {
-        Integer[] arr = genRandomIntArray(5, 0, 10);
+        Integer[] arr = Helper.genRandomIntArray(5, 0, 10);
 
         System.out.println("Selection Sort: ");
         System.out.println("Array before sorting: " + Arrays.toString(arr));
@@ -28,24 +29,12 @@ public class SortTests {
         System.out.println("Array after sorting: " + Arrays.toString(arr));
     }
 
-    /**
-     * Generates an array of size arrSize of random Integer objects where the
-     * generated integer values are between lowerBound and upperBound, inclusive.
-     *
-     * @param arrSize -- size of array to be generated
-     * @param lowerBound -- lowest possible random integer
-     * @param upperBound -- largest possible random integer
-     */
-    private static Integer[] genRandomIntArray(int arrSize, int lowerBound, int upperBound) {
+    private static void insertionSort() {
+        Integer[] arr = Helper.genRandomIntArray(5, 0, 10);
 
-        Integer[] arr = new Integer[arrSize];
-        Random rand = new Random();
-
-        for (int i = 0; i < arrSize; i += 1) {
-            Integer randNum = rand.nextInt((upperBound - lowerBound) + 1) + lowerBound;
-            arr[i] = randNum;
-        }
-
-        return arr;
+        System.out.println("Insertion Sort: ");
+        System.out.println("Array before sorting: " + Arrays.toString(arr));
+        InsertionSort.insertionSort(arr);
+        System.out.println("Array after sorting: " + Arrays.toString(arr));
     }
 }

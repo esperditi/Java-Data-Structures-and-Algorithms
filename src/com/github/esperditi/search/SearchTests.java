@@ -13,8 +13,8 @@ public class SearchTests {
      * @param args
      */
     public static void main(String args[]) {
-        sequentialSearch();
-        binarySearch();
+        //sequentialSearch();
+        //binarySearch();
     }
 
     /**
@@ -43,5 +43,4 @@ public class SearchTests {
         System.out.println("Value to search for: " + value);
         System.out.println("The value " + value + (BinarySearch.binarySearch(arr, value) ? " was found": " was not found"));
     }
-
 }

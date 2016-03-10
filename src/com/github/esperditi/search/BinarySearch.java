@@ -22,7 +22,7 @@ public class BinarySearch {
     public static <T extends Comparable<? super T>> boolean binarySearch(T[] arr, T val) {
         int leftIdx = 0;
         int rightIdx = arr.length -1;
-        
+
         while (leftIdx <= rightIdx) {
             int mid = (leftIdx + rightIdx)/2;
 
