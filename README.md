@@ -1,5 +1,12 @@
 #This is a repository dedicated to data structures and algorithms in Java!
 
 ---
-##Sorting
+##Searching
 + sequentialSearch
++ binarySearch
+
+---
+##Sorting
++ InsertionSort
++ MergeSort
++ SelectionSort

@@ -15,6 +15,7 @@ public class SortTests {
     public static void main(String[] args) {
         //selectionSort();
         //insertionSort();
+        //mergeSort();
     }
 
     /**
@@ -33,6 +34,15 @@ public class SortTests {
         Integer[] arr = Helper.genRandomIntArray(5, 0, 10);
 
         System.out.println("Insertion Sort: ");
+        System.out.println("Array before sorting: " + Arrays.toString(arr));
+        InsertionSort.insertionSort(arr);
+        System.out.println("Array after sorting: " + Arrays.toString(arr));
+    }
+
+    private static void mergeSort() {
+        Integer[] arr = Helper.genRandomIntArray(5, 0, 10);
+
+        System.out.println("Merge Sort: ");
         System.out.println("Array before sorting: " + Arrays.toString(arr));
         InsertionSort.insertionSort(arr);
         System.out.println("Array after sorting: " + Arrays.toString(arr));
